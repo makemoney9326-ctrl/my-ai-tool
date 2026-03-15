@@ -47,15 +47,38 @@ border:none;
 
 <button onclick="login()">Login</button>
 
-<script>
+  <script>
 
 function login(){
 
-window.location.href="dashboard.html"
+let u = document.querySelectorAll("input")[0].value;
+let p = document.querySelectorAll("input")[1].value;
+
+if(u === "admin" && p === "1234"){
+
+window.location.href = "dashboard.html";
+
+}else{
+
+alert("Wrong login");
 
 }
 
-</script>
+}
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
