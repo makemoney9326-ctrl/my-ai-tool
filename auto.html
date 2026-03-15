@@ -51,9 +51,8 @@ margin:10px;
 
 <h3>Test Comment</h3>
 
-let msg = document.getElementById("reply").value;
-let trig = document.getElementById("trigger").value;
 
+  
 <button onclick="check()">Send</button>
 
 <p id="result"></p>
@@ -61,8 +60,9 @@ let trig = document.getElementById("trigger").value;
 
 function save(){
 
-let msg = document.querySelectorAll("input")[0].value;
-let trig = document.querySelectorAll("input")[1].value;
+
+let msg = document.getElementById("reply").value;
+let trig = document.getElementById("trigger").value;
 
 localStorage.setItem("reply", msg);
 localStorage.setItem("trigger", trig);
@@ -74,6 +74,32 @@ window.onload = function(){
 
 let msg = localStorage.getItem("reply");
 let trig = localStorage.getItem("trigger");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+if(msg){
+document.querySelectorAll("input")[0].value = msg;
+}
+
+if(trig){
+document.querySelectorAll("input")[1].value = trig;
+}
+
+}
+
 function check(){
 
 let comment = document.getElementById("comment").value;
@@ -91,17 +117,6 @@ document.getElementById("result").innerText = "No reply";
 
 }
 
-}
-if(msg){
-document.querySelectorAll("input")[0].value = msg;
-}
-
-if(trig){
-document.querySelectorAll("input")[1].value = trig;
-}
-
-}
 </script>
-
 </body>
 </html>
