@@ -40,10 +40,10 @@ margin:10px;
 
 <p>Set Auto Reply Message</p>
 
-<input placeholder="Reply message">
+<input id="reply" placeholder="Reply message">
 <br>
 
-<input placeholder="Trigger word">
+<input id="trigger" placeholder="Trigger words (hi,hello,test)">
 <br>
 
 <button onclick="save()">Save</button>
@@ -51,8 +51,8 @@ margin:10px;
 
 <h3>Test Comment</h3>
 
-<input id="comment" placeholder="Type comment">
-<br>
+let msg = document.getElementById("reply").value;
+let trig = document.getElementById("trigger").value;
 
 <button onclick="check()">Send</button>
 
