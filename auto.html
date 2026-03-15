@@ -53,8 +53,9 @@ margin:10px;
 
 
   
-<button onclick="check()">Send</button>
-
+<input id="comment" placeholder="Type comment">
+<br>
+58 <button onclick="check()">Send</button>
 <p id="result"></p>
 <script>
 
@@ -71,31 +72,14 @@ alert("Saved")
 
 }
 window.onload = function(){
-
 let msg = localStorage.getItem("reply");
 let trig = localStorage.getItem("trigger");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 if(msg){
-document.querySelectorAll("input")[0].value = msg;
+document.getElementById("reply").value = msg;
 }
 
 if(trig){
-document.querySelectorAll("input")[1].value = trig;
+document.getElementById("trigger").value = trig;
 }
 
 }
@@ -116,7 +100,7 @@ document.getElementById("result").innerText = msg;
 document.getElementById("result").innerText = "No reply";
 
 }
-
+}
 </script>
 </body>
 </html>
