@@ -46,7 +46,23 @@ margin:10px;
 <input placeholder="Trigger word">
 <br>
 
-<button>Save</button>
+<button onclick="save()">Save</button>
+
+<script>
+
+function save(){
+
+let msg = document.querySelectorAll("input")[0].value;
+let trig = document.querySelectorAll("input")[1].value;
+
+localStorage.setItem("reply", msg);
+localStorage.setItem("trigger", trig);
+
+alert("Saved")
+
+}
+
+</script>
 
 </body>
 </html>
